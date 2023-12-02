@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Mushui Liu (刘木水)"
+title: "About Me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
