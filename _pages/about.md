@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me"
+title: ""
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,6 +8,8 @@ redirect_from:
   - /about.html
 ---
 
+About Me
+======
 My research is on Parameter-Efficient Fine-tuning (PEFT), Few-shot Learning (FSL), and Self-supervised Learning (SSL). 
 
 Education
