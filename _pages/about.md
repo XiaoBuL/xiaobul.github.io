@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "Mushui Liu"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
