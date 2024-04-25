@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="description" content="LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation">
 <meta name="keywords" content="Text-to-Image Diffusion Models, Large Language Models, Text-Image Alignment">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</title>
-
+  
 <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
 <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -23,81 +24,120 @@
 <script src="./static/js/index.js"></script>
 </head>
 
+  
 <body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="xxxx">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://kwonminki.github.io/Asyrp/">
+            Asyrp
+          </a>
+          <a class="navbar-item" href="https://curryjung.github.io/InjectFusion/">
+            InjectFusion
+          </a>
+          <a class="navbar-item" href="https://curryjung.github.io/VisualStylePrompt/">
+            Visual Style Prompting
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</h1>
+          <h1 class="title is-1 publication-title">Visual Style Prompting with Swapping Self-Attention</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="xxx">Mushui Liu</a><sup>1</sup>,</span>
+              <a href="https://drive.google.com/file/d/19I3s70cfQ45dC_JiD2kmkv0MZ8yu4kBZ/view">Jaeseok Jeong<sup>*</sup></a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a >Yuhang Ma</a>,</span>
+              <a href="https://github.com/taki0112">Junho Kim<sup>*</sup></a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://openreview.net/profile?id=~Yixiao_Fang1">Yixiao Fang*</a>,
+              <a href="https://www.linkedin.com/in/yunjey-choi-27b347175/?originalSubdomain=kr">Yunjey Choi</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://openreview.net/profile?id=~BIN_FU2">Bin Fu*</a>,
+              <a href="https://www.linkedin.com/in/gayoung-lee-0824548a/?originalSubdomain=kr">Gayoung Lee</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://openreview.net/profile?id=~Pei_Cheng1">Pei Cheng</a>,
+              <a href="https://vilab.yonsei.ac.kr/member">Youngjung Uh</a><sup>1</sup>,
             </span>
-            </span>
-            <span class="author-block">
-              <a href="https://www.skicyyu.org/">Gang Yu&#10022</a>,
+
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Tencent</span>
+            <span class="author-block"><sup>1</sup>Yonsei University,</span>
+            <span class="author-block"><sup>2</sup>NAVER AI Lab</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup></sup>(* Equal contributions, &#10022 Corresponding Author)</span>
+            <span class="author-block">* Equal contribution</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="xx" class="external-link button is-normal is-rounded is-dark">
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
+                      <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>PDF</span>
+                  <span>Paper</span>
                 </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2403.05135" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>Arxiv</span>
-                </a>
-              </span>
+              </span>-->
 
+              <span class="link-block"> 
+                <a href="https://arxiv.org/abs/2402.12974"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/TencentQQGYLab/ELLA"
-                  class="external-link button is-normal is-rounded is-dark">
+                <a href="https://github.com/naver-ai/Visual-Style-Prompting"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="fab fa-github"></i>
+                      <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                </a>
+                  </a>
               </span>
-
-              <span class="link-block">
-                <a href="https://github.com/TencentQQGYLab/ELLA"
-                  class="external-link button is-normal is-rounded is-dark">
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="fa fa-database"></i>
+                      <i class="far fa-images"></i>
                   </span>
-                  <span>Benchmark</span>
-                </a>
-              </span>
-
+                  <span>Data</span>
+                  </a> -->
             </div>
 
           </div>
@@ -105,6 +145,7 @@
       </div>
     </div>
   </div>
+</section>
   
 </body>
 </html>
