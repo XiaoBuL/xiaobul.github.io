@@ -10,6 +10,10 @@
 <title>Mushui Liu 刘木水</title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.">
 
+<!-- Favicon - LMS Icon (Circular) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23ff8c00'/%3E%3Ctext x='50' y='65' font-family='Arial, sans-serif' font-size='42' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ELMS%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Ccircle cx='90' cy='90' r='90' fill='%23ff8c00'/%3E%3Ctext x='90' y='115' font-family='Arial, sans-serif' font-size='75' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ELMS%3C/text%3E%3C/svg%3E">
+
 <!-- Open Graph -->
 
 
@@ -49,6 +53,17 @@
   /* Link styles */
   a {
     transition: color 0.2s ease;
+  }
+  
+  /* About Me section links - blue color */
+  #about a {
+    color: #3498db !important;
+    text-decoration: none;
+  }
+  
+  #about a:hover {
+    color: #2980b9 !important;
+    text-decoration: underline;
   }
   
   /* Heading styles */
@@ -209,7 +224,7 @@
             <a class="nav-link" href="#top">Homepage</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About me</a>
+            <a class="nav-link" href="#about">About Me</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#news">News</a>
@@ -245,7 +260,7 @@
           <p style="margin: 18px 0; line-height: 1.9; color: #34495e; font-size: 0.95em;">
             <strong style="color: #2c3e50; font-weight: 600;">Researcher</strong><br />
             <a href="https://www.alibaba.com/" target="_blank" rel="noopener noreferrer" style="color: #3498db; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#2980b9'" onmouseout="this.style.color='#3498db'">Alibaba Group</a><br />
-            <span style="color: #555;">Zhejiang University</span><br />
+            <a href="https://en.wikipedia.org/wiki/Zhejiang_University" target="_blank" rel="noopener noreferrer" style="color: #555; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#555'">Zhejiang University</a><br />
             <span style="color: #555;">Hangzhou, China</span>
           </p>
           <hr style="margin: 25px 0; border: none; border-top: 1px solid #e8e8e8;" />
@@ -266,9 +281,9 @@
 
           <article>
 
-<h2 id="about">About me</h2>
+<h2 id="about">About Me</h2>
 <p>
-  I am currently a Researcher at <a href="https://www.alibaba.com/" target="_blank" rel="noopener noreferrer">Alibaba Group</a> via the <a href="https://talent.taotian.com/star/home" target="_blank" rel="noopener noreferrer">T-Star Lab Talent Program</a>. I received my Ph.D. degree in the College of Information Science & Electronic Engineering from <a href="https://en.wikipedia.org/wiki/Zhejiang_University" target="_blank" rel="noopener noreferrer">Zhejiang University</a> in June 2025, where I was supervised by <a href="https://person.zju.edu.cn/en/yunlong" target="_blank" rel="noopener noreferrer">Prof. Yunlong Yu</a>. During my Ph.D. period, I worked closely with <a href="https://labazh.github.io/" target="_blank" rel="noopener noreferrer">Bozheng Li</a>, <a href="https://yuhang-ma.github.io/" target="_blank" rel="noopener noreferrer">Yuhang Ma</a>, <a href="https://scholar.google.com/citations?user=Vm1moSIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Zhen Yang</a>, <a href="https://scholar.google.com/citations?user=beobICAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Wanggui He</a>, and <a href="https://scholar.google.com/citations?user=tql_Zc4AAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Dr. Siming Fu</a>. I also received my B.S. degree (Microelectronics Science and Engineering) from <a href="https://en.wikipedia.org/wiki/Zhejiang_University" target="_blank" rel="noopener noreferrer">Zhejiang University</a> in 2020.
+  <p>I am currently a Researcher at <a href="https://www.alibaba.com/" target="_blank" rel="noopener noreferrer">Alibaba Group</a> through the <a href="https://talent.taotian.com/star/home" target="_blank" rel="noopener noreferrer">T-Star Lab Talent Program</a>, serving as a corporate postdoctoral fellow under the supervision of <a href="https://scholar.google.com/citations?user=fqOwFhQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Prof. Jun Xiao</a> and <a href="https://scholar.google.com/citations?user=NpTmcKEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Ying Chen</a>.</p> I received my Ph.D. degree in the College of Information Science & Electronic Engineering from <a href="https://en.wikipedia.org/wiki/Zhejiang_University" target="_blank" rel="noopener noreferrer">Zhejiang University</a> in June 2025, where I was supervised by <a href="https://person.zju.edu.cn/en/yunlong" target="_blank" rel="noopener noreferrer">Prof. Yunlong Yu</a>. During my Ph.D. period, I worked closely with <a href="https://labazh.github.io/" target="_blank" rel="noopener noreferrer">Bozheng Li</a>, <a href="https://yuhang-ma.github.io/" target="_blank" rel="noopener noreferrer">Yuhang Ma</a>, <a href="https://scholar.google.com/citations?user=Vm1moSIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Zhen Yang</a>, <a href="https://scholar.google.com/citations?user=beobICAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Wanggui He</a>, and <a href="https://scholar.google.com/citations?user=tql_Zc4AAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Dr. Siming Fu</a>. I also received my B.S. degree (Microelectronics Science and Engineering) from <a href="https://en.wikipedia.org/wiki/Zhejiang_University" target="_blank" rel="noopener noreferrer">Zhejiang University</a> in 2020.
 </p>
 
 <p>
@@ -430,7 +445,7 @@
 
 <li id="fuse-aaai-2026">
   FUSE: Fine-Grained and Semantic-Aware Learning for Unified Image Understanding and Generation <br />
-  Peng Zhang<sup>#</sup>, Wanggui He<sup>#</sup><sup>†</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Wenyi Xiao, Siyu Zou, Yuan Li, Xingjian Wang, Guanghao Zhang, Yanpeng Liu, Weilong Dai, Jinlong Liu, Shuyi Ying, Ruikai Zhou, Yunlong Yu, Yubo Tao, Hai Lin<sup>*</sup>, Hao Jiang<sup>*</sup> <br />
+  Peng Zhang<sup>#</sup>, Wanggui He<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Wenyi Xiao, Siyu Zou, Yuan Li, Xingjian Wang, Guanghao Zhang, Yanpeng Liu, Weilong Dai, Jinlong Liu, Shuyi Ying, Ruikai Zhou, Yunlong Yu, Yubo Tao, Hai Lin<sup>*</sup>, Hao Jiang<sup>*</sup> <br />
   <i>The 40th Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></i>. 2026.
 </li>
 
@@ -563,7 +578,7 @@
 </article>
 
 <!-- MapMyVisitors Visitor Statistics -->
-<div style="text-align: center; margin: 20px 0;">
+<div style="text-align: center; margin: 5px 0;">
 <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=MUMqYmZi9dD6sWA6QkWRAX2-1UMsbQaVsidh4cA0BHg&cl=ffffff&w=a"></script>
 </div>
 
