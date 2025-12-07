@@ -71,33 +71,65 @@
     color: #2c3e50;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 20px;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 8px;
     border-bottom: 2px solid #e8e8e8;
+    font-size: 1.5em;
   }
   
   /* First heading should be closer to top */
   article > h2:first-of-type {
-    padding-top: 10px;
+    padding-top: 5px;
   }
   
   h3 {
     color: #34495e;
     font-weight: 600;
-    margin-top: 25px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+  }
+  
+  /* Paragraph spacing */
+  p {
+    margin-bottom: 12px;
+    line-height: 1.7;
   }
   
   /* Publication list item spacing */
   ol li {
-    margin-bottom: 6px;
-    padding-bottom: 2px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    line-height: 1.6;
   }
   
   ol li:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
+  }
+  
+  /* List spacing */
+  ul {
+    margin-bottom: 15px;
+  }
+  
+  ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+  
+  /* Table spacing */
+  table {
+    margin-bottom: 20px;
+  }
+  
+  table tr {
+    line-height: 1.5;
+  }
+  
+  table td, table th {
+    padding: 8px 12px !important;
   }
   
   /* Smooth scroll with offset for fixed navbar */
@@ -256,21 +288,21 @@
     <!-- Content -->
     <div style="display: flex; margin-top: 70px; padding-top: 0;">
       <!-- Left Sidebar - Fixed -->
-      <aside id="sidebar" style="width: 280px; position: fixed; top: 70px; left: 0; height: calc(100vh - 70px); overflow-y: auto; padding: 30px 25px; background-color: #ffffff; border-right: 1px solid #e8e8e8; z-index: 1020; box-shadow: 1px 0 3px rgba(0,0,0,0.03);">
-        <div style="text-align: center; margin-bottom: 25px;">
-          <img src="/assets/img/mushuiliu.jpg" alt="Mushui Liu" style="width: 180px; height: auto; border-radius: 50%; margin-bottom: 18px; border: 3px solid #f5f5f5; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" />
-          <h2 style="margin: 12px 0 6px 0; font-size: 1.6em; color: #2c3e50; font-weight: 600; letter-spacing: -0.5px;">Mushui Liu</h2>
-          <h3 style="margin: 0; font-size: 1.05em; color: #7f8c8d; font-weight: 400;">刘木水</h3>
+      <aside id="sidebar" style="width: 260px; position: fixed; top: 70px; left: 0; height: calc(100vh - 70px); overflow-y: auto; padding: 20px 20px; background-color: #ffffff; border-right: 1px solid #e8e8e8; z-index: 1020; box-shadow: 1px 0 3px rgba(0,0,0,0.03);">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <img src="/assets/img/mushuiliu.jpg" alt="Mushui Liu" style="width: 160px; height: auto; border-radius: 50%; margin-bottom: 15px; border: 3px solid #f5f5f5; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" />
+          <h2 style="margin: 10px 0 5px 0; font-size: 1.5em; color: #2c3e50; font-weight: 600; letter-spacing: -0.5px;">Mushui Liu</h2>
+          <h3 style="margin: 0; font-size: 1em; color: #7f8c8d; font-weight: 400;">刘木水</h3>
         </div>
-        <div style="padding: 0 5px;">
-          <p style="margin: 18px 0; line-height: 1.9; color: #34495e; font-size: 0.95em;">
+        <div style="padding: 0 3px;">
+          <p style="margin: 15px 0; line-height: 1.8; color: #34495e; font-size: 0.9em;">
             <strong style="color: #2c3e50; font-weight: 600;">Researcher</strong><br />
             <a href="https://www.alibaba.com/" target="_blank" rel="noopener noreferrer" style="color: #3498db; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#2980b9'" onmouseout="this.style.color='#3498db'">Alibaba Group</a><br />
             <a href="https://en.wikipedia.org/wiki/Zhejiang_University" target="_blank" rel="noopener noreferrer" style="color: #555; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#555'">Zhejiang University</a><br />
             <span style="color: #555;">Hangzhou, China</span>
           </p>
-          <hr style="margin: 25px 0; border: none; border-top: 1px solid #e8e8e8;" />
-          <p style="margin: 18px 0; line-height: 2.2; color: #34495e; font-size: 0.95em;">
+          <hr style="margin: 20px 0; border: none; border-top: 1px solid #e8e8e8;" />
+          <p style="margin: 15px 0; line-height: 2; color: #34495e; font-size: 0.9em;">
             <svg style="width: 18px; height: 18px; margin-right: 10px; vertical-align: middle; fill: #555; transition: fill 0.2s ease;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> <a href="mailto:lms@zju.edu.cn" style="color: #34495e; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#b02418'; this.previousElementSibling.style.fill='#b02418'" onmouseout="this.style.color='#34495e'; this.previousElementSibling.style.fill='#555'">lms@zju.edu.cn</a><br />
             <svg style="width: 18px; height: 18px; margin-right: 10px; vertical-align: middle; fill: #555; transition: fill 0.2s ease;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/><path d="M12 11.5c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg> <a href="https://scholar.google.com/citations?user=-WUyWpMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="color: #34495e; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#b02418'; this.previousElementSibling.style.fill='#b02418'" onmouseout="this.style.color='#34495e'; this.previousElementSibling.style.fill='#555'">Google Scholar</a><br />
             <svg style="width: 18px; height: 18px; margin-right: 10px; vertical-align: middle; fill: #555; transition: fill 0.2s ease;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> <a href="https://github.com/XiaobuL" target="_blank" rel="noopener noreferrer" style="color: #34495e; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#b02418'; this.previousElementSibling.style.fill='#b02418'" onmouseout="this.style.color='#34495e'; this.previousElementSibling.style.fill='#555'">GitHub</a>
@@ -279,7 +311,7 @@
       </aside>
 
       <!-- Main Content -->
-      <main style="margin-left: 280px; flex: 1; padding: 10px 50px 30px 50px; background-color: #fafafa; min-height: calc(100vh - 70px);">
+      <main style="margin-left: 260px; flex: 1; padding: 15px 40px 30px 40px; background-color: #fafafa; min-height: calc(100vh - 70px);">
         <div class="post">
           <header class="post-header">
             <h1 class="post-title" style="display: none;">Mushui Liu 刘木水</h1>
@@ -475,7 +507,7 @@
 
 <li id="cmmcot-aaai-2026">
   CMMCoT: Enhancing Complex Multi-Image Comprehension via Multi-Modal Chain-of-Thought and Memory Augmentation <a href="/assets/teaser/CMMCoT.pdf">[Paper]</a> <br />
-  Guozhen Zhang<sup>#</sup>, Tianyu Zhong<sup>#</sup>, Yuxuan Xia<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Zhelun Yu, Haoyuan Li, Wanggui He, Fangxun Shu, ... <br />
+  Guozhen Zhang<sup>#</sup>, Tao Zhong<sup>#</sup>, Yan Xia<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Zhelun Yu, Haoyuan Li, Wanggui He, Fangxun Shu, ... <br />
   <i>The 40th Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></i>. 2026.
 </li>
 
@@ -529,7 +561,7 @@
 
 <li id="synth-clip-2025">
   Synth-CLIP: Synthetic Data Make CLIP Generalize Better in Data-Limited Scenarios <a href="https://www.sciencedirect.com/science/article/pii/S0893608024010128">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Weijie He, Ziqian Lu, Jun Dan, Yunlong Yu<sup>*</sup>, Yuhang Li, Xi Li, Jungong Han <br />
+  <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Weijie He, Ziqian Lu, Jun Dan, Yunlong Yu<sup>*</sup>, Yingming Li, Xi Li, Jungong Han <br />
   <i>Neural Networks <strong>(Neural Networks)</strong></i>. 2025.
 </li>
 
