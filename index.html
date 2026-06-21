@@ -1,821 +1,412 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-    
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<title>Mushui Liu 刘木水</title>
-<meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.">
-
-<!-- Favicon - LMS Icon (Circular) -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23ff8c00'/%3E%3Ctext x='50' y='65' font-family='Arial, sans-serif' font-size='42' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ELMS%3C/text%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Ccircle cx='90' cy='90' r='90' fill='%23ff8c00'/%3E%3Ctext x='90' y='115' font-family='Arial, sans-serif' font-size='75' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ELMS%3C/text%3E%3C/svg%3E">
-
-<!-- Open Graph -->
-
-
-<!-- Bootstrap & MDB -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
-
-<!-- Fonts & Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
-<link
-  defer
-  rel="stylesheet"
-  type="text/css"
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
->
-
-<!-- Code Syntax Highlighting -->
-<link rel="stylesheet" href="/assets/css/jekyll-pygments-themes/github.css">
-
-<!-- Styles -->
-
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/">
-
-<style>
-  /* Global font setting - Modern sans-serif like reference site */
-  body, * {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  }
-  
-  /* Body background */
-  body {
-    background-color: #fafafa;
-  }
-  
-  /* Link styles */
-  a {
-    transition: color 0.2s ease;
-  }
-  
-  /* About Me section links - blue color */
-  #about a {
-    color: #3498db !important;
-    text-decoration: none;
-  }
-  
-  #about a:hover {
-    color: #2980b9 !important;
-    text-decoration: underline;
-  }
-  
-  /* Heading styles */
-  h2 {
-    color: #2c3e50;
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 15px;
-    padding-top: 20px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #e8e8e8;
-    font-size: 1.5em;
-  }
-  
-  /* First heading should be closer to top */
-  article > h2:first-of-type {
-    padding-top: 5px;
-  }
-  
-  h3 {
-    color: #34495e;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 12px;
-    font-size: 1.2em;
-  }
-  
-  /* Paragraph spacing */
-  p {
-    margin-bottom: 12px;
-    line-height: 1.7;
-  }
-  
-  /* Publication list item spacing */
-  ol li {
-    margin-bottom: 8px;
-    padding-bottom: 4px;
-    line-height: 1.6;
-  }
-  
-  ol li:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  
-  /* List spacing */
-  ul {
-    margin-bottom: 15px;
-  }
-  
-  ul li {
-    margin-bottom: 8px;
-    line-height: 1.6;
-  }
-  
-  /* Table spacing */
-  table {
-    margin-bottom: 20px;
-  }
-  
-  table tr {
-    line-height: 1.5;
-  }
-  
-  table td, table th {
-    padding: 8px 12px !important;
-  }
-  
-  /* Smooth scroll with offset for fixed navbar */
-  html {
-    scroll-behavior: auto;
-    scroll-padding-top: 80px;
-  }
-  
-  /* Navigation bar - Left aligned with spacing */
-  #navbar {
-    padding: 12px 0;
-    background-color: #fff !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-    z-index: 1030;
-  }
-  
-  #navbar .container {
-    max-width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  
-  #navbar .navbar-nav {
-    margin-left: 0 !important;
-    margin-right: auto !important;
-  }
-  
-  #navbar .nav-item {
-    margin-right: 35px;
-  }
-  
-  #navbar .nav-link {
-    font-size: 15px;
-    font-weight: 500;
-    color: #333 !important;
-    padding: 5px 0 !important;
-    transition: color 0.2s ease;
-    position: relative;
-  }
-  
-  #navbar .nav-link:hover {
-    color: #b02418 !important;
-  }
-  
-  #navbar .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #b02418;
-    transition: width 0.3s ease;
-  }
-  
-  #navbar .nav-link:hover::after {
-    width: 100%;
-  }
-  
-  /* Adjust anchor positions to account for fixed navbar */
-  h2[id], div[id] {
-    scroll-margin-top: 80px;
-  }
-  
-  /* Sidebar responsive styles */
-  @media (max-width: 768px) {
-    #sidebar {
-      display: none;
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Mushui Liu, Liu Mushui, multimodal AI, image generation, video generation">
+  <meta name="description" content="Mushui Liu's homepage">
+  <title>Mushui Liu's Homepage</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23527bbd'/%3E%3Ctext x='50' y='64' font-family='Arial, sans-serif' font-size='36' font-weight='bold' fill='white' text-anchor='middle'%3ELMS%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css">
+  <style>
+    html {
+      background: #eeeeee;
     }
-    main {
-      margin-left: 0 !important;
-      padding: 20px !important;
+
+    * {
+      box-sizing: border-box;
     }
-    #navbar .nav-item {
-      margin-right: 20px;
+
+    body {
+      max-width: 980px;
+      margin: 30px auto;
+      padding: 12px 52px 34px;
+      color: #111111;
+      background: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.32;
     }
-  }
-  
-  /* Smooth scrolling for sidebar */
-  #sidebar {
-    scrollbar-width: thin;
-    scrollbar-color: #d0d0d0 #ffffff;
-  }
-  
-  #sidebar::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  #sidebar::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-  
-  #sidebar::-webkit-scrollbar-thumb {
-    background: #d0d0d0;
-    border-radius: 3px;
-  }
-  
-  #sidebar::-webkit-scrollbar-thumb:hover {
-    background: #b0b0b0;
-  }
-  
-  #sidebar a {
-    color: #2c3e50;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  #sidebar a:hover {
-    color: #b02418;
-  }
-  
-  /* Publication tag styles */
-  .pub-tag {
-    display: inline-block;
-    background-color: #e8e8e8;
-    color: #555;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 0.75em;
-    font-weight: 500;
-    margin-right: 8px;
-    margin-bottom: 4px;
-  }
-</style>
 
+    a {
+      color: #224b8d;
+      text-decoration: none;
+    }
 
+    a:hover {
+      border-bottom: 1px dotted #777777;
+    }
 
+    h1,
+    h2,
+    h3 {
+      color: #527bbd;
+      line-height: 1;
+    }
 
-  </head>
+    h1 {
+      margin: 0 0 0.5em;
+      padding: 0.4em 0 0.3em;
+      font-size: 1.75em;
+      font-weight: normal;
+    }
 
-  <body class="fixed-top-nav " id="top">
+    h2 {
+      margin: 1.15em 0 0.55em;
+      padding: 0.6em 0 0.2em;
+      border-bottom: 1px solid #aaaaaa;
+      font-size: 1.32em;
+      font-weight: normal;
+    }
 
-    <!-- Header -->
+    h3 {
+      margin: 0 0 0.75em;
+      border: 0;
+      font-size: 1.08em;
+      font-weight: normal;
+    }
 
-    <header>
+    p {
+      margin: 0 0 0.85em;
+    }
 
-    <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav flex-nowrap">
-          <li class="nav-item">
-            <a class="nav-link" href="#top">Homepage</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#news">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#publications">Publications</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Navbar Toggle -->
-      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-    </div>
-  </nav>
+    ul,
+    ol {
+      margin-top: 0.2em;
+      margin-bottom: 0.8em;
+      padding-left: 1.6em;
+    }
 
-</header>
+    li {
+      margin-top: 0.82em;
+    }
 
+    .top {
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
 
-    <!-- Content -->
-    <div style="display: flex; margin-top: 70px; padding-top: 0;">
-      <!-- Left Sidebar - Fixed -->
-      <aside id="sidebar" style="width: 260px; position: fixed; top: 70px; left: 0; height: calc(100vh - 70px); overflow-y: auto; padding: 20px 20px; background-color: #ffffff; border-right: 1px solid #e8e8e8; z-index: 1020; box-shadow: 1px 0 3px rgba(0,0,0,0.03);">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <img src="/assets/img/mushuiliu.jpg" alt="Mushui Liu" style="width: 160px; height: auto; border-radius: 50%; margin-bottom: 15px; border: 3px solid #f5f5f5; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" />
-          <h2 style="margin: 10px 0 5px 0; font-size: 1.5em; color: #2c3e50; font-weight: 600; letter-spacing: -0.5px;">Mushui Liu</h2>
-          <h3 style="margin: 0; font-size: 1em; color: #7f8c8d; font-weight: 400;">刘木水</h3>
-        </div>
-        <div style="padding: 0 3px;">
-          <p style="margin: 15px 0; line-height: 1.8; color: #34495e; font-size: 0.9em;">
-            <strong style="color: #2c3e50; font-weight: 600;">Researcher</strong><br />
-            <a href="https://www.alibaba.com/" target="_blank" rel="noopener noreferrer" style="color: #3498db; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#2980b9'" onmouseout="this.style.color='#3498db'">Alibaba Group</a><br />
-            <a href="https://en.wikipedia.org/wiki/Zhejiang_University" target="_blank" rel="noopener noreferrer" style="color: #555; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#3498db'" onmouseout="this.style.color='#555'">Zhejiang University</a><br />
-            <span style="color: #555;">Hangzhou, China</span>
+    .top td {
+      vertical-align: top;
+    }
+
+    .intro {
+      width: 65%;
+      padding-right: 28px;
+    }
+
+    .portrait-cell {
+      width: 35%;
+      text-align: right;
+    }
+
+    .portrait {
+      width: auto;
+      max-width: 100%;
+      height: clamp(180px, 20vw, 220px);
+      border-radius: 8px;
+    }
+
+    .profile-links {
+      margin-top: 0.9em;
+      line-height: 1.8;
+    }
+
+    .profile-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-right: 16px;
+    }
+
+    .news {
+      max-height: 238px;
+      overflow-y: auto;
+      padding-left: 1.35em;
+    }
+
+    .news li {
+      margin-top: 0.58em;
+    }
+
+    .news strong {
+      color: #555555;
+      font-weight: normal;
+    }
+
+    .publications li {
+      margin-top: 1em;
+    }
+
+    .me {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .note {
+      color: #555555;
+      font-size: 0.95em;
+    }
+
+    .visitor-map {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        margin: 0;
+        padding: 18px 20px 28px;
+      }
+
+      .top,
+      .top tbody,
+      .top tr,
+      .top td {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      .intro {
+        padding-right: 0;
+      }
+
+      .portrait-cell {
+        margin-top: 18px;
+        text-align: left;
+      }
+
+      .portrait {
+        height: min(210px, 58vw);
+      }
+    }
+  </style>
+</head>
+<body>
+  <table class="top">
+    <tbody>
+      <tr>
+        <td class="intro">
+          <h1>Mushui Liu &nbsp; 刘木水</h1>
+          <!-- <h3>Researcher in Multimodal Artificial Intelligence</h3> -->
+          <p>
+            Alibaba Group, Zhejiang University<br>
+            Hangzhou, China
           </p>
-          <hr style="margin: 20px 0; border: none; border-top: 1px solid #e8e8e8;" />
-          <p style="margin: 15px 0; line-height: 2; color: #34495e; font-size: 0.9em;">
-            <svg style="width: 18px; height: 18px; margin-right: 10px; vertical-align: middle; fill: #555; transition: fill 0.2s ease;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> <a href="mailto:lms@zju.edu.cn" style="color: #34495e; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#b02418'; this.previousElementSibling.style.fill='#b02418'" onmouseout="this.style.color='#34495e'; this.previousElementSibling.style.fill='#555'">lms@zju.edu.cn</a><br />
-            <svg style="width: 18px; height: 18px; margin-right: 10px; vertical-align: middle; fill: #555; transition: fill 0.2s ease;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/><path d="M12 11.5c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm0 7c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg> <a href="https://scholar.google.com/citations?user=-WUyWpMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="color: #34495e; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#b02418'; this.previousElementSibling.style.fill='#b02418'" onmouseout="this.style.color='#34495e'; this.previousElementSibling.style.fill='#555'">Google Scholar</a><br />
-            <svg style="width: 18px; height: 18px; margin-right: 10px; vertical-align: middle; fill: #555; transition: fill 0.2s ease;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> <a href="https://github.com/XiaobuL" target="_blank" rel="noopener noreferrer" style="color: #34495e; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#b02418'; this.previousElementSibling.style.fill='#b02418'" onmouseout="this.style.color='#34495e'; this.previousElementSibling.style.fill='#555'">GitHub</a>
+          <p>
+            Email: <a href="mailto:lms@zju.edu.cn">lms@zju.edu.cn</a>
           </p>
-        </div>
-      </aside>
+          <p class="profile-links">
+            <a href="https://scholar.google.com/citations?user=-WUyWpMAAAAJ&hl=en"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+            <a href="https://github.com/XiaobuL"><i class="fab fa-github"></i> GitHub</a>
+          </p>
+        </td>
+        <td class="portrait-cell">
+          <img class="portrait" src="assets/img/mushuiliu.jpg" alt="Mushui Liu">
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-      <!-- Main Content -->
-      <main style="margin-left: 260px; flex: 1; padding: 15px 40px 30px 40px; background-color: #fafafa; min-height: calc(100vh - 70px);">
-        <div class="post">
-          <header class="post-header">
-            <h1 class="post-title" style="display: none;">Mushui Liu 刘木水</h1>
-          </header>
+  <h2>Biography</h2>
+  <p>
+    I am currently a Researcher at <a href="https://www.alibaba.com/">Alibaba Group</a> through the
+    <a href="https://talent.taotian.com/star/home">T-Star Lab Talent Program</a>, also serving as a
+    corporate postdoctoral fellow under the supervision of
+    <a href="https://scholar.google.com/citations?user=fqOwFhQAAAAJ&hl=en">Prof. Jun Xiao</a> and
+    <a href="https://scholar.google.com/citations?user=NpTmcKEAAAAJ&hl=en">Dr. Ying Chen</a>.
+    My research focuses on multimodal artificial intelligence, especially <strong> Image Generation </strong>, <strong>Unified
+    Models</strong>, <strong>Video Understanding and Generation</strong>, and <strong> Representation Learning </strong>.
+  </p>
+  <p>
+    I received my Ph.D. degree in the College of Information Science &amp; Electronic Engineering from
+    <a href="https://en.wikipedia.org/wiki/Zhejiang_University">Zhejiang University</a> in June 2025,
+    where I was supervised by <a href="https://person.zju.edu.cn/en/yunlong">Prof. Yunlong Yu</a>.
+    During my Ph.D. period, I worked closely with <a href="https://labazh.github.io/">Bozheng Li</a>,
+    <a href="https://yuhang-ma.github.io/">Yuhang Ma</a>,
+    <a href="https://scholar.google.com/citations?user=Vm1moSIAAAAJ&hl=en">Zhen Yang</a>,
+    <a href="https://scholar.google.com/citations?user=beobICAAAAAJ&hl=en">Wanggui He</a>,
+    <a href="https://danjun6737.github.io">Jun Dan</a>,
+    <a href="https://scholar.google.com/citations?user=DcVoflUAAAAJ&hl=zh-CN">Dong She</a>, and
+    <a href="https://scholar.google.com/citations?user=tql_Zc4AAAAJ&hl=zh-CN">Siming Fu</a>.
+    I also received my B.S. degree from Zhejiang University in 2020.
+  </p>
+  <p>
+    During my Ph.D. studies, I had a wonderful time interning at
+    <a href="https://talent.taotian.com/">Taobao and Tmall Group</a>,
+    <a href="https://fuxi.163.com/">Fuxi AI Lab NetEase</a>,
+    <a href="https://www.hulu.com/welcome">Disney Hulu</a>, and ByteDance.
+  </p>
+  <p>
+    💬 Our team is hiring research interns who have strong engineering skills and a strong interest in AIGC.
+    Feel free to drop me an email (<a href="mailto:lms@zju.edu.cn">lms@zju.edu.cn</a>) if you have an
+    interest in the above topics, and remote cooperation is welcome.
+  </p>
 
-          <article>
+  <h2>News</h2>
+  <ul class="news">
+    <li><strong>Jun 18, 2026</strong>: Two papers are accepted to ECCV 2026.</li>
+    <li><strong>May 1, 2026</strong>: One paper is accepted to ICML 2026.</li>
+    <li><strong>Apr 16, 2026</strong>: One paper is accepted to IEEE Transactions on Artificial Intelligence.</li>
+    <li><strong>Feb 22, 2026</strong>: One paper is accepted to CVPR 2026.</li>
+    <li><strong>Jan 26, 2026</strong>: One paper is accepted to ICLR 2026.</li>
+    <li><strong>Nov 08, 2025</strong>: Two papers are accepted to AAAI 2026.</li>
+    <li><strong>Sep 27, 2025</strong>: One paper is accepted to Neurocomputing.</li>
+    <li><strong>May 19, 2025</strong>: One paper is accepted to Knowledge-Based Systems.</li>
+    <li><strong>Apr 4, 2025</strong>: One CVPR paper is selected as Highlight.</li>
+    <li><strong>Feb 27, 2025</strong>: One paper is accepted to CVPR 2025.</li>
+    <li><strong>Jan 9, 2025</strong>: One paper is accepted to IEEE Transactions on Circuits and Systems for Video Technology.</li>
+    <li><strong>Dec 20, 2024</strong>: One paper is accepted to Neural Networks.</li>
+    <li><strong>Dec 12, 2024</strong>: Four papers are accepted to AAAI 2025.</li>
+    <li><strong>July 15, 2024</strong>: One paper is accepted to ACM MM 2024.</li>
+    <li><strong>July 12, 2024</strong>: One paper is accepted to ECAI 2024.</li>
+    <li><strong>July 01, 2024</strong>: One paper is accepted to ECCV 2024.</li>
+    <li><strong>Feb 03, 2024</strong>: One paper is accepted to Neural Networks.</li>
+    <li><strong>Oct 23, 2022</strong>: One paper is accepted to Neurocomputing.</li>
+  </ul>
 
-<h2 id="about">About Me</h2>
-<p>
-  <p>I am currently a Researcher at <a href="https://www.alibaba.com/" target="_blank" rel="noopener noreferrer">Alibaba Group</a> through the <a href="https://talent.taotian.com/star/home" target="_blank" rel="noopener noreferrer">T-Star Lab Talent Program</a>, also serving as a corporate postdoctoral fellow under the supervision of <a href="https://scholar.google.com/citations?user=fqOwFhQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Prof. Jun Xiao</a> and <a href="https://scholar.google.com/citations?user=NpTmcKEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Ying Chen</a>.</p> I received my Ph.D. degree in the College of Information Science & Electronic Engineering from <a href="https://en.wikipedia.org/wiki/Zhejiang_University" target="_blank" rel="noopener noreferrer">Zhejiang University</a> in June 2025, where I was supervised by <a href="https://person.zju.edu.cn/en/yunlong" target="_blank" rel="noopener noreferrer">Prof. Yunlong Yu</a>. During my Ph.D. period, I worked closely with <a href="https://labazh.github.io/" target="_blank" rel="noopener noreferrer">Bozheng Li</a>, <a href="https://yuhang-ma.github.io/" target="_blank" rel="noopener noreferrer">Yuhang Ma</a>, <a href="https://scholar.google.com/citations?user=Vm1moSIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Zhen Yang</a>, <a href="https://scholar.google.com/citations?user=beobICAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Wanggui He</a>, <a href="https://danjun6737.github.io" target="_blank" rel="noopener noreferrer">Jun Dan</a>, <a href="https://scholar.google.com/citations?user=DcVoflUAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Dong She</a>, and <a href="https://scholar.google.com/citations?user=tql_Zc4AAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Siming Fu</a>. I also received my B.S. degree from <a href="https://en.wikipedia.org/wiki/Zhejiang_University" target="_blank" rel="noopener noreferrer">Zhejiang University</a> in 2020.
-</p>
+  <h2>Selected Publications [<a href="https://scholar.google.com/citations?user=-WUyWpMAAAAJ&hl=en">Google Scholar</a>]</h2>
+  <p class="note"><sup>#</sup> co-first author |  <sup>*</sup> corresponding author.</p>
+  <ol class="publications">
+    <li>
+      <a href="http://openaccess.thecvf.com/content/CVPR2025/html/Liu_TFCustom_Customized_Image_Generation_with_Time-Aware_Frequency_Feature_Guidance_CVPR_2025_paper.html">TFCustom: Customized Image Generation with Time-Aware Frequency Feature Guidance</a><br>
+      <span class="me">Mushui Liu</span>, Dong She, Jingxuan Pang, Qihan Huang, Jiacheng Ying, Wanggui He, Yuanlei Hou, Siming Fu<br>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR, Highlight</strong>)</em>, 2025.
+    </li>
+    <li>
+      <a href="https://arxiv.org/pdf/2508.07341">Alleviating Sparse Rewards by Modeling Step-Wise and Long-Term Sampling Effects in Flow-Based GRPO</a><br>
+      Yunze Tong<sup>#</sup>, <span class="me">Mushui Liu<sup>#,*</sup></span>, Canyu Zhao, Wanggui He, Shiyi Zhang, Hongwei Zhang, Peng Zhang, Jinlong Liu, Ju Huang, Jiamang Wang, Hao Jiang, Pipei Huang<br>
+      <em>International Conference on Machine Learning (<strong>ICML</strong>)</em>, 2026.
+    </li>
+    <li>
+      <a href="https://arxiv.org/pdf/2407.00737">LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</a><br>
+      <span class="me">Mushui Liu</span>, Yuhang Ma, Zhen Yang, Jun Dan, Yunlong Yu, Zeng Zhao, Bai Liu, Changjie Fan, Zhipeng Hu<br>
+      <em>The 39th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>)</em>, 2025.
+    </li>
+    <li>
+      <a href="https://arxiv.org/pdf/2408.12469">Envisioning Class Entity Reasoning by Large Language Models for Few-shot Learning</a><br>
+      <span class="me">Mushui Liu</span>, Fangtai Wu, Bozheng Li, Ziqian Lu, Yunlong Yu, Xi Li<br>
+      <em>The 39th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>)</em>, 2025.
+    </li>
+    <li>
+      <a href="https://arxiv.org/pdf/2503.01298">Mint: Multi-Modal Chain of Thought in Unified Generative Models for Enhanced Image Generation</a><br>
+      Yi Wang<sup>#</sup>, <span class="me">Mushui Liu<sup>#</sup></span>, Wanggui He, Hanyang Yuan, Longxiang Zhang  Ziwei Huang, Guanghao Zhang, Wenkai Fang, Haoze Jiang, Shengxuming Zhang, Dong She, Jinlong Liu, Weilong Dai, Mingli Song, Hao Jiang, Jie Song<br>
+      <em>European Conference on Computer Vision (<strong>ECCV</strong>)</em>, 2026.
+    </li>
 
-<p>
-  My research focuses on advancing the frontiers of multimodal artificial intelligence, with particular emphasis on four key areas: <strong>🖼️ ① Image Generation</strong>, <strong>🔗 ② Unified Models</strong>, <strong>🎬 ③ Video Understanding/Video Generation</strong>, and <strong>📚 ④ Representation Learning</strong>. 
-</p>
+    <li>
+      <a href="https://arxiv.org/pdf/2508.07341">DCoAR: Deep Concept Injection into Unified Autoregressive Models for Personalized Text-to-Image Generation</a><br>
+      Fangtai Wu<sup>#</sup>, <span class="me">Mushui Liu<sup>#</sup></span>, Weijie He, Zhao Wang, Yunlong Yu<br>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em>, 2026.
+    </li>
+    <li>
+      <a href="https://ieeexplore.ieee.org/document/11498633/">MetaFusion: Instance-Aware Meta-Prompting and Token Refinement for VLMs Generalization</a><br>
+      <span class="me">Mushui Liu</span>, Fangtai Wu, Ziqian Lu, Zhao Wang, Yunlong Yu, Jungong Han, Zhongfei Zhang<br>
+      <em>IEEE Transactions on Artificial Intelligence (<strong>TAI</strong>)</em>, 2026.
+    </li>
+    <li>
+      <a href="https://arxiv.org/abs/2509.01977">MOSAIC: Multi-Subject Personalized Generation via Correspondence-Aware Alignment and Disentanglement</a><br>
+      Dong She<sup>#</sup>, Siming Fu<sup>#</sup>, <span class="me">Mushui Liu<sup>#</sup></span>, Qiaoqiao Jin, Hualiang Wang, Mu Liu, Jidong Jiang<br>
+      <em>International Conference on Learning Representations (<strong>ICLR</strong>)</em>, 2026.
+    </li>
+    <li>
+      <a href="https://ojs.aaai.org/index.php/AAAI/article/view/40064"> FUSE: Fine-Grained and Semantic-Aware Learning for Unified Image Understanding and Generation</a><br>
+      Peng Zhang<sup>#</sup>, Wanggui He<sup>#</sup>, <span class="me">Mushui Liu<sup>#</sup></span>, Wenyi Xiao, Siyu Zou, Yuan Li, Xingjian Wang, Guanghao Zhang, Yanpeng Liu, Weilong Dai, Jinlong Liu, Shuyi Ying, Ruikai Zhou, Yunlong Yu, Yubo Tao, Hai Lin, Hao Jiang<br>
+      <em>The 40th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>)</em>, 2026.
+    </li>
+    <li>
+      <a href="assets/teaser/CMMCoT.pdf">CMMCoT: Enhancing Complex Multi-Image Comprehension via Multi-Modal Chain-of-Thought and Memory Augmentation</a><br>
+      Guozhen Zhang<sup>#</sup>, Tao Zhong<sup>#</sup>, Yan Xia<sup>#</sup>, <span class="me">Mushui Liu<sup>#</sup></span>, Zhelun Yu, Haoyuan Li, Wanggui He, Fangxun Shu, ...<br>
+      <em>The 40th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>)</em>, 2026.
+    </li>
+    <li>
+      <a href="https://arxiv.org/pdf/2407.07614">Mars: Mixture of Auto-Regressive Models for Fine-grained Text-to-Image Synthesis</a><br>
+      Wanggui He<sup>#</sup>, Siming Fu<sup>#</sup>, <span class="me">Mushui Liu<sup>#</sup></span>, Xierui Wang, Wenyi Xiao, Fangxun Shu, Yi Wang, Lei Zhang, Zhelun Yu, Haoyuan Li, Ziwei Huang, LeiLei Gan, Hao Jiang<br>
+      <em>The 39th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>)</em>, 2025.
+    </li>
+    <li>
+      <a href="https://arxiv.org/pdf/2408.12475">Frame Order Matters: A Temporal Sequence-Aware Model for Few-Shot Action Recognition</a><br>
+      Bozheng Li<sup>#</sup>, <span class="me">Mushui Liu<sup>#</sup></span>, Gaoang Wang, Yunlong Yu<br>
+      <em>The 39th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>)</em>, 2025.
+    </li>
+    <li>
+      <a href="https://ui.adsabs.harvard.edu/abs/2025arXiv250302537Y/abstract">RectifiedHR: Enable Efficient High-Resolution Image Generation via Energy Rectification</a><br>
+      Zhen Yang, Guibao Shen, Liang Hou, <span class="me">Mushui Liu</span>, Luozhou Wang, Xin Tao, Pengfei Wan, Di Zhang, Ying-Cong Chen<br>
+      <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR, findings</strong>)</em>, 2026.
+    </li>
+    <li>
+      <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-72661-3_19.pdf">Improving Zero-Shot Generalization for CLIP with Variational Adapter</a><br>
+      Ziqian Lu, Fangtai Shen, <span class="me">Mushui Liu</span>, Yunlong Yu, Zhao Wang, Xi Li, Jungong Han<br>
+      <em>European Conference on Computer Vision (<strong>ECCV</strong>)</em>, 2024.
+    </li>
+    <li>
+      <a href="https://ebooks.iospress.nl/pdf/doi/10.3233/FAIA240499">OmniCLIP: Adapting CLIP for Video Recognition with Spatial-Temporal Omni-Scale Feature Learning</a><br>
+      <span class="me">Mushui Liu</span>, Bozheng Li, Yunlong Yu<br>
+      <em>European Conference on Artificial Intelligence (<strong>ECAI</strong>)</em>, 2024.
+    </li>
+    <li>
+      <a href="https://ieeexplore.ieee.org/abstract/document/10843280/">Variational Adapter: Improving CLIP in Data-Imbalanced Scenarios</a><br>
+      Ziqian Lu, <span class="me">Mushui Liu</span>, Yunlong Yu, Zhao Wang, Xi Li, Jungong Han<br>
+      <em>IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>)</em>, 2025.
+    </li>
+    <li>
+      <a href="https://www.sciencedirect.com/science/article/pii/S0893608024010128">Synth-CLIP: Synthetic Data Make CLIP Generalize Better in Data-Limited Scenarios</a><br>
+      <span class="me">Mushui Liu</span>, Weijie He, Ziqian Lu, Jun Dan, Yunlong Yu, Yingming Li, Xi Li, Jungong Han<br>
+      <em>Neural Networks (<strong>Neural Networks</strong>)</em>, 2025.
+    </li>
+    <li>
+      <a href="https://www.sciencedirect.com/science/article/pii/S0893608024001394">Tolerant Self-Distillation for Image Classification</a><br>
+      <span class="me">Mushui Liu</span>, Yunlong Yu, Zhong Ji, Jungong Han, Zhongfei Zhang<br>
+      <em>Neural Networks (<strong>Neural Networks</strong>)</em>, 2024.
+    </li>
+    <li>
+      <a href="https://www.sciencedirect.com/science/article/pii/S0950705125008652">Fully Fine-Tuned CLIP Models are Efficient Few-Shot Learners</a><br>
+      <span class="me">Mushui Liu</span>, Bozheng Li, Jun Dan, Ziqian Lu, Zhao Wang, Yunlong Yu<br>
+      <em>Knowledge-Based Systems (<strong>KBS</strong>)</em>, 2025.
+    </li>
+    <li>
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231225023604">Hybrid mask generation for infrared small target detection with single-point supervision</a><br>
+      Weijie He, <span class="me">Mushui Liu</span>, Yunlong Yu<br>
+      <em>Neurocomputing (<strong>Neurocomputing</strong>)</em>, 2025.
+    </li>
+    <li>
+      <a href="https://www.sciencedirect.com/science/article/pii/S0925231222012954">Lightweight MIMO-WNet for single image deblurring</a><br>
+      <span class="me">Mushui Liu</span>, Yunlong Yu, Yingming Li, Zhong Ji, Wen Chen, Yang Peng<br>
+      <em>Neurocomputing (<strong>Neurocomputing</strong>)</em>, 2023.
+    </li>
+    <li>
+      <a href="https://arxiv.org/pdf/2411.14125">RestorerID: Towards Tuning-Free Face Restoration with ID Preservation</a><br>
+      Jiacheng Ying<sup>#</sup>, <span class="me">Mushui Liu<sup>#</sup></span>, Zhaoyang Wu, Rui Zhang, Zhelun Yu, Siming Fu, Shiyu Cao, Chen Wu, Yunlong Yu, Huiliang Shen<br>
+      <em>In Submission</em>.
+    </li>
+    <li>
+      <a href="https://arxiv.org/pdf/2504.15032">DyST-XL: Dynamic Layout Planning and Content Control for Compositional Text-to-Video Generation</a><br>
+      <span class="me">Mushui Liu</span>, Weijie He Yunlong Yu, Zhao Wang, Chao Wu<br>
+      <em>In Submission</em>.
+    </li>
+    <li>
+      <a href="https://arxiv.org/abs/2502.06527v1">CustomVideoX: 3D Reference Attention Driven Dynamic Adaptation for Zero-Shot Customized Video Diffusion Transformers</a><br>
+      Dong She<sup>#</sup>, <span class="me">Mushui Liu<sup>#</sup></span>, Jingxuan Pang, Jin Wang, Zhen Yang, Wanggui He, Guanghao Zhang, Yi Wang, Qihan Huang, Haobin Tang, Yunlong Yu, Siming Fu<br>
+      <em>In Submission</em>.
+    </li>
+    <li>
+      <a href="https://arxiv.org/pdf/2405.10530">CM-UNet: Hybrid CNN-Mamba UNet for Remote Sensing Image Semantic Segmentation</a><br>
+      <span class="me">Mushui Liu</span>, Jun Dan, Ziqian Lu, Yunlong Yu, Yuhang Li, Xi Li<br>
+      <em>In Submission</em>.
+    </li>
+  </ol>
 
-<p>
-  💬 Our team is hiring research interns who have strong engineering skills and a strong interest in AIGC. Feel free to drop me an email (lms@zju.edu.cn) if you have an interest in the above topics, and remote cooperation is welcome.
-</p>
-      
-  <div class="news">
-  <h2 id="news">🔥 News</h2>
-    <div class="table-responsive" style="height: 250px; overflow-y:scroll">
-      <table class="table table-sm table-borderless" style="width: 100%">
-        <colgroup>
-           <col span="1" style="width: 15%;">
-           <col span="1" style="width: 85%;">
-        </colgroup>
-      <!-- Put <thead>, <tbody>, and <tr>'s here! -->
-      <tbody>
-
-
-        <tr>
-          <th scope="row">Jun 18, 2026</th>
-          <td>
-            🎉🎉🎉 <strong>Two paper </strong> are accepted to <strong>ECCV-2026</strong>.
-          </td>
-        </tr>
-
-        
-        <tr>
-          <th scope="row">May 1, 2026</th>
-          <td>
-            🎉🎉🎉 <strong>One paper </strong> is accepted to <strong>ICML-2026</strong>.
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">Apr 16, 2026</th>
-          <td>
-            🎉🎉🎉 <strong>One paper </strong> is accepted to <strong>IEEE Transactions on Artificial Intelligence</strong>.
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">Feb 22, 2026</th>
-          <td>
-            🎉🎉🎉 <strong>One paper </strong> is accepted to <strong>CVPR-2026</strong>.
-          </td>
-        </tr>
-        
-        <tr>
-          <th scope="row">Jan 26, 2026</th>
-          <td>
-            🎉🎉🎉 <strong>One paper </strong> is accepted to <strong>ICLR-2026</strong>.
-          </td>
-        </tr>
-        
-        <tr>
-          <th scope="row">Nov 08, 2025</th>
-          <td>
-            🎉🎉🎉 <strong>Two paper </strong> is accepted to <strong>AAAI-2026</strong>.
-          </td>
-        </tr>
-        
-        <tr>
-          <th scope="row">Sep 27, 2025</th>
-          <td>
-            🎉🎉🎉 <strong>One paper </strong> is accepted to <strong>Neurocomputing</strong>.
-          </td>
-        </tr>
-        
-        <tr>
-          <th scope="row">May 19, 2025</th>
-          <td>
-            🎉🎉🎉 <strong>One paper </strong> is accepted to <strong>Knowledge-Based Systems</strong>.
-          </td>
-        </tr>
-        
-        <tr>
-          <th scope="row">Apr 4, 2025</th>
-          <td>
-            🎉🎉🎉 <strong>One CVPR paper </strong> is selected as <strong>Highlight</strong>.
-          </td>
-        </tr>
-        
-        <tr>
-          <th scope="row">Feb 27, 2025</th>
-          <td>
-            🎉🎉🎉 <strong>One</strong> paper is accepted to <strong>CVPR-2025</strong>.
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Jan 9, 2025</th>
-          <td>
-            🎉🎉🎉 <strong>One</strong> paper is accepted to <strong>IEEE Transactions on Circuits and Systems for Video Technology</strong>.
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Dec 20, 2024</th>
-          <td>
-            🎉🎉🎉 <strong>One</strong> paper is accepted to <strong>Neural Networks</strong>.
-          </td>
-        </tr>
-        <tr>
-            <th scope="row">Dec 12, 2024</th>
-            <td>
-              🎉🎉🎉 <strong>Four</strong> papers are accepted to <strong>AAAI-2025</strong>.
-            </td>
-        </tr>
-        <tr>
-          <th scope="row">July 01, 2024</th>
-          <td>
-            🎉🎉🎉 <strong>One</strong> paper is accepted to <strong>ECCV-2024</strong>.
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">July 15, 2024</th>
-          <td>
-            🎉🎉🎉 <strong>One</strong> paper is accepted to <strong>ACM MM-2024</strong>.
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">July 12, 2024</th>
-          <td>
-            🎉🎉🎉 <strong>One</strong> paper is accepted to <strong>ECAI-2024</strong>.
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Feb 03, 2024</th>
-          <td>
-            🎉🎉🎉 <strong>One</strong> paper is accepted to <strong>Neural Networks</strong>.
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">Oct 23, 2022</th>
-          <td>
-            🎉🎉🎉 <strong>One</strong> paper is accepted to <strong>Neurocomputing</strong>.
-          </td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
-  
-</div>
-
-<div class="publications">
-<h2 id="publications">📝 Selected Publications</h2>
-<p> Full publication list can be found on <a href="https://scholar.google.com/citations?user=-WUyWpMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>. <br>
-  <span style="color:#b02418; font-weight:bold;"><sup>#</sup></span> co-first author | <span style="color:#b02418; font-weight:bold;"><sup>*</sup></span> corresponding author. </p>
-
-  <ol>
-
-    <style>
-  .pub-tag {
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-weight: 500;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-  
-  .tag-blue {
-    background-color: #E3F2FD;
-    color: #1976D2;
-    border: 1px solid #1976D2;
-  }
-  
-  .tag-purple {
-    background-color: #F3E5F5;
-    color: #7B1FA2;
-    border: 1px solid #7B1FA2;
-  }
-  
-  .tag-green {
-    background-color: #E8F5E9;
-    color: #388E3C;
-    border: 1px solid #388E3C;
-  }
-        
-  .tag-red {
-    background-color: #FFEBEE;
-    color: #D32F2F;
-    border: 1px solid #D32F2F;
-  }
-      
-  .tag-orange {
-    background-color: #FFF3E0;
-    color: #F57C00;
-    border: 1px solid #F57C00;
-  }
-</style>
-    
-<!-- 
-<div>
-  <span class="pub-tag tag-blue">Representation Learning</span>
-   <span class="pub-tag tag-purple">Image Generation</span>
-  <span class="pub-tag tag-red">RL</span>
-    <span class="pub-tag tag-green">Video Understanding & Generation</span>
-  <span class="pub-tag tag-orange">Unified Models</span>
-    
-</div> -->
-    
-<li id="tfcustom-cvpr-2025">
-  <span class="pub-tag tag-purple">Image Generation</span>
-  TFCustom: Customized Image Generation with Time-Aware Frequency Feature Guidance <a href="http://openaccess.thecvf.com/content/CVPR2025/html/Liu_TFCustom_Customized_Image_Generation_with_Time-Aware_Frequency_Feature_Guidance_CVPR_2025_paper.html">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Dong She<sup>#</sup>, Jingxuan Pang, Qihan Huang, Jiacheng Ying, Wanggui He, Yuanlei Hou, Siming Fu<sup>*</sup> <br />
-  <i>IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR, Highlight ⭐⭐⭐)</strong> </i>, 2025.
-</li>
-    
-<li id="llm4gen-aaai-2025">
-  <span class="pub-tag tag-purple">Image Generation</span>
-  LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation <a href="https://arxiv.org/pdf/2407.00737">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Yuhang Ma<sup>#</sup>, Zhen Yang, Jun Dan, Yunlong Yu<sup>*</sup>, Zeng Zhao<sup>*</sup>, Bai Liu, Changjie Fan, Zhipeng Hu <br />
-  <i>The 39th Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></i>. 2025.
-</li>
-
-<li id="ecer-fsl-aaai-2025">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  Envisioning Class Entity Reasoning by Large Language Models for Few-shot Learning <a href="https://arxiv.org/pdf/2408.12469">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Fangtai Wu, Bozheng Li, Ziqian Lu, Yunlong Yu<sup>*</sup>, Xi Li <br />
-  <i>The 39th Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></i>. 2025.
-</li>
-
-<li id="mint-2025">
-  <span class="pub-tag tag-orange">Unified Models</span>
-  Mint: Multi-Modal Chain of Thought in Unified Generative Models for Enhanced Image Generation <a href="https://arxiv.org/pdf/2503.01298">[Paper]</a> <br />
-  Yi Wang<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Wanggui He<sup>#</sup>, Lei Zhang, Ziwei Huang, Guanghao Zhang, Fangxun Shu, Yubo Tao, ... <br />
- <i>European Conference on Computer Vision <strong>(ECCV)</strong></i>. 2026.
-</li>
-
-    
-<li id="tp-grpo-2025">
-  <span class="pub-tag tag-red">RL</span>
-  Alleviating Sparse Rewards by Modeling Step-Wise and Long-Term Sampling Effects in Flow-Based GRPO <a href="https://arxiv.org/pdf/2508.07341">[Paper]</a> <br />
-  Yunze Tong<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#,*</sup></span>, Canyu Zhao, Wanggui He, Shiyi Zhang, Hongwei Zhang, Peng Zhang, Jinlong Liu, Ju Huang, Jiamang Wang, Hao Jiang<sup>*</sup>, Pipei Huang <br />
-  <i>International Conference on Machine Learning <strong>(ICML)</strong>, 2026</i>.
-</li>
-
-    
-<li id="coar-2025">
-  <span class="pub-tag tag-purple">Image Generation</span>
-  DCoAR: Deep Concept Injection into Unified Autoregressive Models for Personalized Text-to-Image Generation <a href="https://arxiv.org/pdf/2508.07341">[Paper]</a> <br />
-  Fangtai Wu<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#,*</sup></span>, Weijie He, Zhao Wang, Yunlong Yu<sup>*</sup> <br />
-  <i>IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026 </i>.
-</li>
-
-  <li id="tai-2026">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  MetaFusion: Instance-Aware Meta-Prompting and Token Refinement for VLMs Generalization <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Fangtai Wu<sup>#</sup>, Ziqian Lu, Zhao Wang, Yunlong Yu, Jungong Han, Zhongfei Zhang  <br />
-  <i>IEEE Transactions on Artificial Intelligence <strong>(TAI)</strong>, 2026</i>.
-</li>
-    
-<li id="mosaic-2025">
-  <span class="pub-tag tag-purple">Image Generation</span>
-  MOSAIC: Multi-Subject Personalized Generation via Correspondence-Aware Alignment and Disentanglement <a href="https://arxiv.org/abs/2509.01977">[Paper]</a> <br />
-  Dong She<sup>#</sup>, Siming Fu<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Qiaoqiao Jin<sup>#</sup>, Hualiang Wang<sup>#</sup>, Mu Liu, Jidong Jiang <br />
-  <i>International Conference on Learning Representations <strong>(ICLR-2026)</strong></i>.
-</li>
-    
-<li id="fuse-aaai-2026">
-  <span class="pub-tag tag-orange">Unified Models</span>
-  FUSE: Fine-Grained and Semantic-Aware Learning for Unified Image Understanding and Generation <br />
-  Peng Zhang<sup>#</sup>, Wanggui He<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Wenyi Xiao, Siyu Zou, Yuan Li, Xingjian Wang, Guanghao Zhang, Yanpeng Liu, Weilong Dai, Jinlong Liu, Shuyi Ying, Ruikai Zhou, Yunlong Yu, Yubo Tao, Hai Lin<sup>*</sup>, Hao Jiang<sup>*</sup> <br />
-  <i>The 40th Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></i>. 2026.
-</li>
-
-<li id="cmmcot-aaai-2026">
-   <span class="pub-tag tag-green">Video Understanding & Generation</span>
-  CMMCoT: Enhancing Complex Multi-Image Comprehension via Multi-Modal Chain-of-Thought and Memory Augmentation <a href="/assets/teaser/CMMCoT.pdf">[Paper]</a> <br />
-  Guozhen Zhang<sup>#</sup>, Tao Zhong<sup>#</sup>, Yan Xia<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Zhelun Yu, Haoyuan Li, Wanggui He, Fangxun Shu, ... <br />
-  <i>The 40th Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></i>. 2026.
-</li>
-
-<li id="mars-aaai-2025">
-  <span class="pub-tag tag-orange">Unified Models</span>
-  Mars: Mixture of Auto-Regressive Models for Fine-grained Text-to-Image Synthesis <a href="https://arxiv.org/pdf/2407.07614">[Paper]</a> <br />
-  Wanggui He<sup>#</sup>, Siming Fu<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Xierui Wang, Wenyi Xiao, Fangxun Shu, Yi Wang, Lei Zhang, Zhelun Yu, Haoyuan Li, Ziwei Huang, LeiLei Gan<sup>*</sup>, Hao Jiang<sup>*</sup> <br />
-  <i>The 39th Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></i>. 2025.
-</li>
-
-<li id="tsam-aaai-2025">
-   <span class="pub-tag tag-green">Video Understanding & Generation</span>
-  Frame Order Matters: A Temporal Sequence-Aware Model for Few-Shot Action Recognition <a href="https://arxiv.org/pdf/2408.12475">[Paper]</a> <br />
-  Bozheng Li<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Gaoang Wang, Yunlong Yu<sup>*</sup> <br />
-  <i>The 39th Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></i>. 2025.
-</li>
-
-<li id="rectifiedhr-2025">
-  <span class="pub-tag tag-purple">Image Generation</span>
-  RectifiedHR: Enable Efficient High-Resolution Image Generation via Energy Rectification <a href="https://ui.adsabs.harvard.edu/abs/2025arXiv250302537Y/abstract">[Paper]</a> <br />
-  Zhen Yang, Guibao Shen, Liang Hou, <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Luozhou Wang, Xin Tao, Pengfei Wan, Di Zhang, Ying-Cong Chen<sup>*</sup> <br />
-  <i>IEEE Conference on Computer Vision and Pattern Recognition <strong>(CVPR, findings)</strong>, 2026 </i>.
-</li>
-    
-<li id="improving-zeroshot-clip-2024">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  Improving Zero-Shot Generalization for CLIP with Variational Adapter <a href="https://link.springer.com/content/pdf/10.1007/978-3-031-72661-3_19.pdf">[Paper]</a> <br />
-  Ziqian Lu, Fangtai Shen, <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Yunlong Yu<sup>*</sup>, Zhao Wang, Xi Li, Jungong Han <br />
-  <i>European Conference on Computer Vision <strong>(ECCV)</strong></i>. 2024.
-</li>
-
-<li id="omniclip-ecai-2024">
-   <span class="pub-tag tag-green">Video Understanding & Generation</span>
-  OmniCLIP: Adapting CLIP for Video Recognition with Spatial-Temporal Omni-Scale Feature Learning <a href="https://ebooks.iospress.nl/pdf/doi/10.3233/FAIA240499">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Bozheng Li, Yunlong Yu<sup>*</sup> <br />
-  <i>European Conference on Artificial Intelligence <strong>(ECAI)</strong></i>. 2024.
-</li>
-
-<li id="variational-adapter-tcsvt-2025">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  Variational Adapter: Improving CLIP in Data-Imbalanced Scenarios <a href="https://ieeexplore.ieee.org/abstract/document/10843280/">[Paper]</a> <br />
-  Ziqian Lu, <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Yunlong Yu<sup>*</sup>, Zhao Wang, Xi Li, Jungong Han <br />
-  <i>IEEE Transactions on Circuits and Systems for Video Technology <strong>(IEEE TCSVT)</strong></i>. 2025.
-</li>
-
-<li id="synth-clip-2025">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  Synth-CLIP: Synthetic Data Make CLIP Generalize Better in Data-Limited Scenarios <a href="https://www.sciencedirect.com/science/article/pii/S0893608024010128">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Weijie He, Ziqian Lu, Jun Dan, Yunlong Yu<sup>*</sup>, Yingming Li, Xi Li, Jungong Han <br />
-  <i>Neural Networks <strong>(Neural Networks)</strong></i>. 2025.
-</li>
-
-<li id="tolerant-selfdistillation-2024">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  Tolerant Self-Distillation for Image Classification <a href="https://www.sciencedirect.com/science/article/pii/S0893608024001394">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Yunlong Yu<sup>*</sup>, Zhong Ji, Jungong Han, Zhongfei Zhang <br />
-  <i>Neural Networks <strong>(Neural Networks)</strong></i>. 2024.
-</li>
-
-<li id="fully-finetuned-clip-2025">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  Fully Fine-Tuned CLIP Models are Efficient Few-Shot Learners <a href="https://www.sciencedirect.com/science/article/pii/S0950705125008652">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Bozheng Li, Jun Dan, Ziqian Lu, Zhao Wang, Yunlong Yu<sup>*</sup> <br />
-  <i>Knowledge-Based Systems <strong>(KBS)</strong></i>. 2025.
-</li>
-
-<li id="hybrid-mask-2025">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  Hybrid mask generation for infrared small target detection with single-point supervision <a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231225023604">[Paper]</a> <br />
-  Weijie He, <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Yunlong Yu<sup>*</sup> <br />
-  <i>Neurocomputing <strong>(Neurocomputing)</strong></i>. 2025.
-</li>
-
-<li id="mimo-wnet-2023">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  Lightweight MIMO-WNet for single image deblurring <a href="https://www.sciencedirect.com/science/article/pii/S0925231222012954">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Yunlong Yu<sup>*</sup>, Yingming Li, Zhong Ji, Wen Chen, Yang Peng <br />
-  <i>Neurocomputing <strong>(Neurocomputing)</strong></i>, Vol. 516, pp. 106-114. 2023.
-</li>
-
-
-<li id="restorerid-2024">
-  <span class="pub-tag tag-purple">Image Generation</span>
-  RestorerID: Towards Tuning-Free Face Restoration with ID Preservation <a href="https://arxiv.org/pdf/2411.14125">[Paper]</a> <br />
-  Jiacheng Ying<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Zhaoyang Wu, Rui Zhang, Zhelun Yu, Siming Fu, Shiyu Cao, Chen Wu, Yunlong Yu, Huiliang Shen<sup>*</sup> <br />
-  <i>In Submission</i>.
-</li>
-
-<li id="dyst-xl-2025">
-   <span class="pub-tag tag-green">Video Understanding & Generation</span>
-  DyST-XL: Dynamic Layout Planning and Content Control for Compositional Text-to-Video Generation <a href="https://arxiv.org/pdf/2504.15032">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Weijie He<sup>#</sup>, Yunlong Yu<sup>*</sup>, Zhao Wang, Chao Wu <br />
-  <i>In Submission</i>.
-</li>
-
-<li id="customvideox-2025">
-   <span class="pub-tag tag-green">Video Understanding & Generation</span>
-  CustomVideoX: 3D Reference Attention Driven Dynamic Adaptation for Zero-Shot Customized Video Diffusion Transformers <a href="https://arxiv.org/abs/2502.06527v1">[Paper]</a> <br />
-  Dong She<sup>#</sup>, <span style="color:#b02418; font-weight:bold;">Mushui Liu<sup>#</sup></span>, Jingxuan Pang, Jin Wang, Zhen Yang, Wanggui He, Guanghao Zhang, Yi Wang, ... <br />
-  <i>In Submission</i>.
-</li>
-
-<li id="cm-unet-2024">
-  <span class="pub-tag tag-blue">Representation Learning</span>
-  CM-UNet: Hybrid CNN-Mamba UNet for Remote Sensing Image Semantic Segmentation <a href="https://arxiv.org/pdf/2405.10530">[Paper]</a> <br />
-  <span style="color:#b02418; font-weight:bold;">Mushui Liu</span>, Jun Dan, Ziqian Lu, Yunlong Yu<sup>*</sup>, Yuhang Li, Xi Li <br />
-  <i>In Submission</i>.
-</li>
-
-</ol>
-
-</div>
-
-<h2 id="-internships">📚 Academic Services</h2>
-<ul>
-  <li><em>Conference: </em> ICLR, CVPR, ECCV, AAAI, ACM'MM, BMVC.</li>
-  <li><em>Journals: </em> TMM, TCSVT, PR, KBS.</li>
-</ul>
-
-<h2 id="-internships">💻 Internships</h2>
-<ul>
-  <li><em>2024.06 - 2025, </em> Content AI, Alibaba Group, Hangzhou.</li>
-  <li><em>2024.01 - 2024.05, </em> Fuxi AI Lab, NetEase, Hangzhou.</li>
-  <li><em>2022, </em> Disney Hulu, Beijing.</li>
-  <li><em>2022, </em> ByteDance, Beijing.</li>
-</ul>
-
-</article>
-
-<!-- MapMyVisitors Visitor Statistics -->
-<div style="text-align: center; margin: 5px 0;">
-<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=MUMqYmZi9dD6sWA6QkWRAX2-1UMsbQaVsidh4cA0BHg&cl=ffffff&w=a"></script>
-</div>
-
-          </article>
-        </div>
-      </main>
-    </div>
-
+  <h2>Academic Services</h2>
+  <ul>
+    <li><em>Conference:</em> ICLR, CVPR, ECCV, AAAI, ACM MM, BMVC.</li>
+    <li><em>Journals:</em> TMM, TCSVT, PR, KBS.</li>
+  </ul>
+  <div class="visitor-map">
+    <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=MUMqYmZi9dD6sWA6QkWRAX2-1UMsbQaVsidh4cA0BHg&cl=ffffff&w=a"></script>
+  </div>
 </body>
-
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-
-<!-- Bootsrap & MDB scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
-
-  
-<!-- Mansory & imagesLoaded -->
-<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
-
-
-<!-- Medium Zoom JS -->
-<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
-<script src="/assets/js/zoom.js"></script>
-
-
-<!-- Load Common JS -->
-<script src="/assets/js/common.js"></script>
-
-  
-<!-- MathJax -->
-<script type="text/javascript">
-  window.MathJax = {
-    tex: {
-      tags: 'ams'
-    }
-  };
-</script>
-<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
-<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-
-<script>
-    $(document).ready(function () {
-        
-        // Smooth scroll with offset for anchor links
-        $('a[href^="#"]').on('click', function(e) {
-            var target = $(this.getAttribute('href'));
-            if(target.length) {
-                e.preventDefault();
-                var offset = 80; // Offset for fixed navbar
-                if(this.getAttribute('href') === '#top') {
-                    window.scrollTo({top: 0, behavior: 'instant'});
-                } else {
-                    var targetPosition = target.offset().top - offset;
-                    window.scrollTo({top: targetPosition, behavior: 'instant'});
-                }
-            }
-        });
-        
-        var gsDataBaseUrl = 'https://raw.githubusercontent.com/XiaobuL/xiaobul.github.io/'
-        
-        $.getJSON(gsDataBaseUrl + "google-scholar-stats/gs_data.json", function (data) {
-            var totalCitation = data['citedby']
-            document.getElementById('total_cit').innerHTML = totalCitation;
-            var citationEles = document.getElementsByClassName('show_paper_citations')
-            Array.prototype.forEach.call(citationEles, element => {
-                var paperId = element.getAttribute('data')
-                var numCitations = data['publications'][paperId]['num_citations']
-                element.innerHTML = '| Citations: ' + numCitations;
-            });
-        });
-    })
-</script>
-
 </html>
